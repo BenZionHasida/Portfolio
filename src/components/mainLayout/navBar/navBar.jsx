@@ -28,6 +28,9 @@ export default function NavBar({isCoverMode}) {
       <NavLink className={aboutRouteActive? `${styles.navLink} ${styles.active}`:styles.navLink} to={aboutRouteActive?"/":"about"}>
       Discover My Story
       </NavLink>
+      <NavLink className={styles.navLink}>
+       Contact Me
+      </NavLink>
     </div>
   )
 }

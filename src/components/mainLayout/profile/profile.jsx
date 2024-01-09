@@ -11,7 +11,7 @@ export default function Profile({ isCoverMode }) {
       />
       <div className={styles.descripition}>
         <h1 className={styles.firstHeader}>Ben zion Hasida</h1>
-        <h2 className={styles.secondHeader}>Software developer</h2>
+        <h2 className={styles.secondHeader}>Software Developer</h2>
       </div>
     </div>
   );

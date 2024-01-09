@@ -30,7 +30,7 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
           <TimelineDot
-            sx={{ color: "white", fill: "white", backgroundColor: "#003366" }}
+            sx={{ color: "#D3D3D3", fill: "#D3D3D3", backgroundColor: "#003366" }}
           >
             <MenuBookIcon />
           </TimelineDot>
@@ -56,7 +56,7 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
           <TimelineDot
-            sx={{ color: "white", fill: "white", backgroundColor: "#003366" }}
+            sx={{ color: "#D3D3D3", fill: "#D3D3D3", backgroundColor: "#003366" }}
           >
             <SchoolIcon />
           </TimelineDot>
@@ -67,7 +67,7 @@ export default function CustomizedTimeline() {
             ORT College
           </Typography>
           <Typography component="div">
-            <ul>
+            <ul style={{textAlign:"left",listStyleType:"disc"}}>
               <li>Certificate Program in Software Engineering.</li>
               <li>
                 Specialization in Python algorithms, database fundamentals, and
@@ -89,7 +89,7 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
           <TimelineDot
-            sx={{ color: "white", fill: "white", backgroundColor: "#003366" }}
+            sx={{ color: "#D3D3D3", fill: "#D3D3D3", backgroundColor: "#003366" }}
           >
             <LaptopMacIcon />
           </TimelineDot>
@@ -100,7 +100,7 @@ export default function CustomizedTimeline() {
             Pareto academy
           </Typography>
           <Typography component="div">
-            <ul>
+            <ul style={{listStyleType:"disc"}}>
               <li>Completed a Full Stack Development Course.</li>
               <li>
                 Gained expertise in web development fundamentals, including
