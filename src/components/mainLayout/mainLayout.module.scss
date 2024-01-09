@@ -1,0 +1,51 @@
+@import "../../assets/styles/variables.module.scss";
+
+
+.mainLayoutCoverMode{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100lvh;
+    background: $gradiant-background;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    transition: height 500ms ease;
+}
+.mainLayoutHeaderMode{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15lvh;
+    background: $gradiant-background-header;
+    // background: $gradiant-background;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.outlet{
+    background-color: $secondary-color-light;
+    background-image: url('../../assets/images/pattern.png');
+    background-attachment: fixed; 
+    background-size: cover; 
+    position: absolute;
+    top: 15lvh;
+    left: 0;
+    width: 100%;
+    height: 85lvh;  
+    transition: height  500ms ease-in-out;
+    overflow: auto;
+}
+.outletCoverMode{
+    background-color: $secondary-color-light;
+    background-image: url('../../assets/images/pattern.png');
+    background-attachment: fixed; 
+    background-size: cover; 
+    position: absolute;
+    top: 15lvh;
+    left: 0;
+    width: 100%;
+    height: 0;  
+}
