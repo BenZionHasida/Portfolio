@@ -42,4 +42,27 @@
 .firstHeader{
     font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+    .containerCoverMode{
+        flex-direction: column;
+        border-right: none;
+        border-bottom: 1px solid $secondary-color-light;
+        .imgCoverMode{
+            max-height: 10rem;
+        }
+    }
+
+    .containerHeaderMode{
+        border-right: none;
+
+        .firstHeader, .secondHeader{
+            display: none;
+        }
+        .imgHeaderMode{
+            max-height: 4rem;
+        }
+    
+    }
+  }
+  
 
