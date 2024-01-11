@@ -151,6 +151,9 @@
 }
 
 @media screen and (max-width: 600px)  {
+    .flexContainer {
+        width: 92lvh;
+    }
     .content{
         min-width: 50%;
         // gap: 0.5rem;

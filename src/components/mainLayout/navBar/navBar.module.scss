@@ -46,6 +46,9 @@
 @media screen and (max-width: 600px) {
     .container{
         flex-direction: row;
+        .navLink{
+            font-size: 0.8rem;
+        }
     }
     .containerHeaderMode{
         flex-basis: 80%;
