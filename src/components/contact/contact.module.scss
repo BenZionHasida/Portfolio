@@ -1,0 +1,64 @@
+@import "../../assets/styles/variables.module.scss";
+
+.container {
+    width: calc(100vw - 4rem);
+    height: calc(85vh - 4rem); 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem; 
+    overflow: auto;
+    a {
+      text-decoration: none;
+      color: inherit; 
+    }
+  }
+  
+  .contactCard {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+    background-color: $dark-gray; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%; 
+    height: 45%;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+  
+    .icon {
+      color: $main-color; 
+      transition: transform 500ms ease;
+      &:hover{
+        transform: scale(1.02);
+        background-color: $secondary-color;
+
+      }
+    }
+  
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $main-color-light;
+      margin: 0;
+    }
+  
+    .description {
+      font-size: 1rem;
+      color: $secondary-color-light; 
+      margin: 0;
+    }
+    
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+  }
+  

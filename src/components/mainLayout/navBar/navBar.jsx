@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 export default function NavBar({isCoverMode}) {
   const [projectsRouteActive, setProjectsRouteActive] = useState(false)
   const [aboutRouteActive, setAboutRouteActive] = useState(false)
+  const [contactRouteActive, setContactRouteActive] = useState(false)
   const location = useLocation()
   useEffect(()=>{
     if (location.pathname === "/projects"){
@@ -19,6 +20,12 @@ export default function NavBar({isCoverMode}) {
     else{
       setAboutRouteActive(false)
     }
+    if (location.pathname === "/contact"){
+      setContactRouteActive(true)
+    }
+    else{
+      setContactRouteActive(false)
+    }
   },[location.pathname])
   return (
     <div className={isCoverMode? styles.container: `${styles.container} ${styles.containerHeaderMode}`}>
@@ -28,8 +35,8 @@ export default function NavBar({isCoverMode}) {
       <NavLink className={aboutRouteActive? `${styles.navLink} ${styles.active}`:styles.navLink} to={aboutRouteActive?"/":"about"}>
       Discover My Story
       </NavLink>
-      <NavLink className={styles.navLink}>
-       Contact Me
+      <NavLink className={contactRouteActive? `${styles.navLink} ${styles.active}`:styles.navLink} to={contactRouteActive?"/":"contact"}>
+      Get in Touch
       </NavLink>
     </div>
   )
