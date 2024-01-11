@@ -55,13 +55,14 @@
     .containerHeaderMode{
         border-right: none;
         justify-content: center;
+        align-items: center;
         gap: 0;
         padding: 0;
         .firstHeader, .secondHeader{
             display: none;
         }
         .imgHeaderMode{
-            max-height: 3rem;
+            max-height: 2.5rem;
             border: 2px solid $main-color;
             margin: 0.1rem 0;
         }
