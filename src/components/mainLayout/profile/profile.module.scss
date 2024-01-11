@@ -42,7 +42,7 @@
 .firstHeader{
     font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
     .containerCoverMode{
         flex-direction: column;
         border-right: none;
@@ -54,12 +54,16 @@
 
     .containerHeaderMode{
         border-right: none;
-
+        justify-content: center;
+        gap: 0;
+        padding: 0;
         .firstHeader, .secondHeader{
             display: none;
         }
         .imgHeaderMode{
-            max-height: 4rem;
+            max-height: 3rem;
+            border: 2px solid $main-color;
+            margin: 0.1rem 0;
         }
     
     }

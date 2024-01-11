@@ -5,3 +5,8 @@ body{
     font-family: $main-font-family;
     color: $main-color;
 }
+@media screen and (max-width: 414px) {
+    body{
+        font-size: 12px;
+    }
+}

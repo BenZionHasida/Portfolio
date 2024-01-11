@@ -10,17 +10,15 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import SchoolIcon from "@mui/icons-material/School";
-import HotelIcon from "@mui/icons-material/Hotel";
-import RepeatIcon from "@mui/icons-material/Repeat";
 import Typography from "@mui/material/Typography";
-import { List, ListItem } from "@mui/material";
 import styles from "./timeLine.module.scss";
 export default function CustomizedTimeline() {
+  const isNarrowScreen = window.innerWidth < 414;
   return (
     <Timeline position="alternate" className={styles.container}>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: "auto 0", fontWeight: 600 }}
+          sx={isNarrowScreen?{ m: "auto 0", fontWeight: 600 , fontSize:"0.6rem"}:{ m: "auto 0", fontWeight: 600 }}
           align="right"
           variant="body2"
           color="#6699CC"
@@ -30,24 +28,28 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
           <TimelineDot
-            sx={{ color: "#D3D3D3", fill: "#D3D3D3", backgroundColor: "#003366" }}
+            sx={{
+              color: "#D3D3D3",
+              fill: "#D3D3D3",
+              backgroundColor: "#003366",
+            }}
           >
             <MenuBookIcon />
           </TimelineDot>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }} color="#505050">
-          <Typography variant="h6" component="span">
+          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"0.8rem"}:{}}>
             Intensive Talmud Studies
           </Typography>
-          <Typography>
+          <Typography sx={isNarrowScreen?{fontSize:"0.6rem"}:{}}>
             Focused on analytical and critical thinking skills.
           </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: "auto 0", fontWeight: 600 }}
+          sx={isNarrowScreen?{ m: "auto 0", fontWeight: 600 , fontSize:"0.6rem"}:{ m: "auto 0", fontWeight: 600 }}
           variant="body2"
           color="#6699CC"
         >
@@ -56,18 +58,22 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
           <TimelineDot
-            sx={{ color: "#D3D3D3", fill: "#D3D3D3", backgroundColor: "#003366" }}
+            sx={{
+              color: "#D3D3D3",
+              fill: "#D3D3D3",
+              backgroundColor: "#003366",
+            }}
           >
             <SchoolIcon />
           </TimelineDot>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }} color="#505050">
-          <Typography variant="h6" component="span">
+          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"0.8rem"}:{}}>
             ORT College
           </Typography>
-          <Typography component="div">
-            <ul style={{textAlign:"left",listStyleType:"disc"}}>
+          <Typography component="div" sx={isNarrowScreen?{fontSize:"0.6rem"}:{}}>
+            <ul style={{ textAlign: "left", listStyleType: "disc" }}>
               <li>Certificate Program in Software Engineering.</li>
               <li>
                 Specialization in Python algorithms, database fundamentals, and
@@ -80,7 +86,7 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: "auto 0", fontWeight: 600 }}
+          sx={isNarrowScreen?{ m: "auto 0", fontWeight: 600 , fontSize:"0.6rem"}:{ m: "auto 0", fontWeight: 600 }}
           variant="body2"
           color="#6699CC"
         >
@@ -89,18 +95,22 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
           <TimelineDot
-            sx={{ color: "#D3D3D3", fill: "#D3D3D3", backgroundColor: "#003366" }}
+            sx={{
+              color: "#D3D3D3",
+              fill: "#D3D3D3",
+              backgroundColor: "#003366",
+            }}
           >
             <LaptopMacIcon />
           </TimelineDot>
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }} color="#505050">
-          <Typography variant="h6" component="span">
+          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"0.8rem"}:{}}>
             Pareto academy
           </Typography>
-          <Typography component="div">
-            <ul style={{listStyleType:"disc"}}>
+          <Typography component="div" sx={isNarrowScreen?{fontSize:"0.6rem"}:{}}>
+            <ul style={{ listStyleType: "disc" }}>
               <li>Completed a Full Stack Development Course.</li>
               <li>
                 Gained expertise in web development fundamentals, including

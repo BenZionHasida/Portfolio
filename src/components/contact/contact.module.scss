@@ -61,4 +61,9 @@
         gap: 0.5rem;
     }
   }
+  @media screen and (max-width: 414px){
+    .contactCard{
+      height: 80%;
+    }
+  }
   

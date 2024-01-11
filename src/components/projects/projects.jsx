@@ -11,6 +11,7 @@ export default function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const [slideIn, setSlideIn] = useState(true);
   const [direction, setDirection] = useState("next");
+  const isNarrowScreen = window.innerWidth < 414;
   const handleNav = (newIndex, navDirection) => {
     setDirection(navDirection);
     setSlideIn(false);
