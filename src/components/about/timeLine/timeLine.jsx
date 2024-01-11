@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import styles from "./timeLine.module.scss";
 export default function CustomizedTimeline() {
   const isNarrowScreen = window.innerWidth < 414;
+  // const isNarrowScreen = false;
   return (
     <Timeline position="alternate" className={styles.container}>
       <TimelineItem>
@@ -39,7 +40,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }} color="#505050">
-          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"0.8rem"}:{}}>
+          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"1rem"}:{}}>
             Intensive Talmud Studies
           </Typography>
           <Typography sx={isNarrowScreen?{fontSize:"0.6rem"}:{}}>
@@ -69,7 +70,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }} color="#505050">
-          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"0.8rem"}:{}}>
+          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"1rem"}:{}}>
             ORT College
           </Typography>
           <Typography component="div" sx={isNarrowScreen?{fontSize:"0.6rem"}:{}}>
@@ -106,7 +107,7 @@ export default function CustomizedTimeline() {
           <TimelineConnector sx={{ backgroundColor: "#003366" }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }} color="#505050">
-          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"0.8rem"}:{}}>
+          <Typography variant="h6" component="span" sx={isNarrowScreen?{fontSize:"1rem"}:{}}>
             Pareto academy
           </Typography>
           <Typography component="div" sx={isNarrowScreen?{fontSize:"0.6rem"}:{}}>
