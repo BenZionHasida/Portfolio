@@ -13,7 +13,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import Typography from "@mui/material/Typography";
 import styles from "./timeLine.module.scss";
 export default function CustomizedTimeline() {
-  const isNarrowScreen = window.innerWidth < 414;
+  const isNarrowScreen = window.innerWidth < 600;
   // const isNarrowScreen = false;
   return (
     <Timeline position="alternate" className={styles.container}>

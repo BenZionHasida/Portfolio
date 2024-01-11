@@ -3,7 +3,7 @@ import styles from "./about.module.scss";
 import CustomizedTimeline from "./timeLine/timeLine";
 import TimelineIcon from "@mui/icons-material/Timeline";
 export default function About() {
-  const isNarrowScreen = window.innerWidth < 414;
+  const isNarrowScreen = window.innerWidth < 600;
   
   return (
     <div className={styles.container}>
