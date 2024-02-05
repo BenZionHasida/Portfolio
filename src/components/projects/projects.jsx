@@ -50,7 +50,7 @@ export default function Projects() {
 
   useEffect(() => {
     if (isAutoSliding) {
-      autoCycleInterval.current = setInterval(handleNextProject, 3000);
+      autoCycleInterval.current = setInterval(handleNextProject, 6000);
     }
     return () => clearInterval(autoCycleInterval.current);
   }, [isAutoSliding]);
