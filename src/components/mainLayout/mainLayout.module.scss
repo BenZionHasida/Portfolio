@@ -50,3 +50,17 @@
     width: 100%;
     height: 0;  
 }
+@media screen and (max-width: 600px) {
+    .mainLayoutCoverMode{
+        flex-direction: column;
+        overflow: auto;
+    }
+    .mainLayoutHeaderMode{
+        height: 14lvh;
+    }
+    .outlet{
+        height: 86lvh;
+        top: 14lvh;
+    }
+}
+  

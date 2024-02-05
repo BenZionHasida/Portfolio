@@ -11,6 +11,10 @@ export default function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const [slideIn, setSlideIn] = useState(true);
   const [direction, setDirection] = useState("next");
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  
   const handleNav = (newIndex, navDirection) => {
     setDirection(navDirection);
     setSlideIn(false);
@@ -20,6 +24,8 @@ export default function Projects() {
       setSlideIn(true);
     }, 300);
   };
+
+
   const slideClass = () => {
     if (!slideIn) {
       return direction === "next" ? styles.slideOutNext : styles.slideOutPrev;
@@ -27,8 +33,10 @@ export default function Projects() {
       return direction === "next" ? styles.slideInNext : styles.slideInPrev;
     }
   };
-  ///////////////////////
-  const autoCycleInterval = useRef(null); // Use useRef to hold the interval id
+
+  // New state to track auto slide status
+  const [isAutoSliding, setIsAutoSliding] = useState(true);
+  const autoCycleInterval = useRef(null);
 
   const handleNextProject = () => {
     setDirection("next");
@@ -40,22 +48,47 @@ export default function Projects() {
     }, 300);
   };
 
-  // Separate effect for automatic cycling
   useEffect(() => {
-    autoCycleInterval.current = setInterval(handleNextProject, 3000);
-
-    // Cleanup the interval on component unmount
+    if (isAutoSliding) {
+      autoCycleInterval.current = setInterval(handleNextProject, 6000);
+    }
     return () => clearInterval(autoCycleInterval.current);
-  }, []); // Empty dependency array to run only on mount
+  }, [isAutoSliding]);
 
-  // Event handler to stop the automatic cycling
-  const stopAutoCycle = () => {
-    clearInterval(autoCycleInterval.current);
+  const toggleAutoSlide = () => {
+    setIsAutoSliding(!isAutoSliding); // Toggle auto slide status
   };
-  const restartAutoCycle = () => {
-    console.log("mouse up");
-    clearInterval(autoCycleInterval.current);
-    autoCycleInterval.current = setInterval(handleNextProject, 3000);
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    clearInterval(autoCycleInterval.current); // Stop auto-slide
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const threshold = 50;
+    const swipeRight = touchEnd > touchStart + threshold;
+    const swipeLeft = touchEnd < touchStart - threshold;
+
+    if (swipeRight) {
+      handleNav(
+        Math.floor((projectIndex - 1 + projects.length) % projects.length),
+        "prev"
+      );
+    } else if (swipeLeft) {
+      handleNav(
+        Math.floor((projectIndex + 1) % projects.length),
+        "next"
+      );
+    } else {
+      // If it's not a swipe, toggle auto-slide
+      setIsAutoSliding(!isAutoSliding);
+    }
   };
 
   return (
@@ -69,6 +102,7 @@ export default function Projects() {
               "next"
             );
           }}
+          
         >
           <IconButton sx={{ borderRadius: "50%" }}>
             <NavigateBeforeIcon fontSize="large" />
@@ -76,10 +110,13 @@ export default function Projects() {
         </div>
         <div
           className={`${styles.content} ${slideClass()}`}
-          onClick={stopAutoCycle}
-          onTouchStart={stopAutoCycle}
-          onMouseUp={restartAutoCycle} // Restart cycling on mouse up
-          onTouchEnd={restartAutoCycle} // Restart cycling on touch end
+          onClick={toggleAutoSlide} // Toggle auto slide on click
+          // onTouchStart={toggleAutoSlide} // Toggle auto slide on touch
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+
+          
         >
           <img
             src={projects[projectIndex].src}
