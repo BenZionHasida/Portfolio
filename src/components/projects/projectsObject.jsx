@@ -2,6 +2,7 @@ import memorySrc from "../../assets/gifs/memory_project.gif"
 import othelloSrc from "../../assets/gifs/othello_project.gif"
 import snakeSrc from "../../assets/gifs/snake_project.gif"
 import wheatherSrc from "../../assets/gifs/wheatherapp_project.gif"
+import playerSrc from "../../assets/gifs/Screen Recording 2024-08-10 225050.gif"
 const projects = [
     {
       name: "Mishnah Memorization App",
@@ -9,6 +10,12 @@ const projects = [
       src: memorySrc,
       link: "https://benzionhasida.github.io/Speach_recognition/", 
       git: "https://github.com/BenZionHasida/Speach_recognition" 
+    },
+    {
+        name: "Audio Player + Windows Task",
+        description: "Simple Audio Player for Automation purposes, including windows task for windows Automation EC2s",
+        src: playerSrc,
+        git: "https://github.com/BenZionHasida/audio-auto-player"
     },
     {
       name: "Othello Game",

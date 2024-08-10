@@ -28,7 +28,7 @@ const contactMethods = [
     link: "mailto:b0583216809@gmail.com",
   },
   {
-    title: "CV",
+    title: "Resume",
     description: "View my full professional journey and accomplishments in my CV.",
     microCopy: "Check out my CV 📄",
     Icon: DescriptionIcon,
