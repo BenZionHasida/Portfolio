@@ -50,7 +50,7 @@ export default function Projects() {
 
   useEffect(() => {
     if (isAutoSliding) {
-      autoCycleInterval.current = setInterval(handleNextProject, 6000);
+      autoCycleInterval.current = setInterval(handleNextProject, 30000);
     }
     return () => clearInterval(autoCycleInterval.current);
   }, [isAutoSliding]);
@@ -99,7 +99,7 @@ export default function Projects() {
           onClick={() => {
             return handleNav(
               Math.floor((projectIndex + 1) % projects.length),
-              "next"
+              "prev"
             );
           }}
           
@@ -148,7 +148,7 @@ export default function Projects() {
               Math.floor(
                 (projectIndex - 1 + projects.length) % projects.length
               ),
-              "prev"
+              "next"
             );
           }}
         >
