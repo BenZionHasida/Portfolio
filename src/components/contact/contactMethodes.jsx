@@ -3,7 +3,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import CV from "../../assets/documents/CV.pdf";
+import CV from "../../assets/documents/Resume-v2.pdf";
 
 const contactMethods = [
   {

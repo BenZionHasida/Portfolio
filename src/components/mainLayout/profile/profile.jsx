@@ -1,5 +1,4 @@
 import styles from "./profile.module.scss";
-// import src from "../../../assets/images/profile.jpg";
 import src from "../../../assets/images/profile_final_image_without_removal.jpg";
 export default function Profile({ isCoverMode }) {
   return (

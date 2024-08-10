@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./projects.module.scss";
-import projects from "./projectsObjects";
+import projects from "./projectsObject.jsx";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { IconButton } from "@mui/material";

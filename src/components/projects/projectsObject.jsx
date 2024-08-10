@@ -19,7 +19,7 @@ const projects = [
     {
       name: "Weather Forecast Application",
       description: "Displays maximum and minimum temperatures and weather icons, fetching data based on the user's location. Implemented asynchronous JavaScript functions for fetching and displaying weather data.",
-      src: wheatherSrc, 
+      src: wheatherSrc,
       link: "https://benzionhasida.github.io/Weather-web-aplication/", // Add link to live site
       git: "https://github.com/BenZionHasida/Weather-web-aplication"
     },
@@ -33,11 +33,3 @@ const projects = [
   ];
   
   export default projects;
-  
-   // {
-    //   name: "Business Loan Application Interface",
-    //   description: "Developed during an internship at Clevir.ai, this project involved creating an interface for business loan applications using React, FastAPI, and other technologies.",
-    //   src: "", // Add path to project GIF or image
-    //   link: "", // Add link to live site
-    //   git: "" // Add link to GitHub repository
-    // },
