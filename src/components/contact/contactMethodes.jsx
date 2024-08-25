@@ -1,9 +1,9 @@
-import DescriptionIcon from "@mui/icons-material/Description";
+// import DescriptionIcon from "@mui/icons-material/Description";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import CV from "../../assets/documents/ResumeV3.pdf";
+// import CV from "../../assets/documents/ResumeV3.pdf";
 
 const contactMethods = [
   {
@@ -27,13 +27,13 @@ const contactMethods = [
     Icon: EmailOutlinedIcon,
     link: "mailto:b0583216809@gmail.com",
   },
-  {
-    title: "Resume",
-    description: "View my full professional journey and accomplishments in my CV.",
-    microCopy: "Check out my CV 📄",
-    Icon: DescriptionIcon,
-    link: CV,
-  },
+  // {
+  //   title: "Resume",
+  //   description: "View my full professional journey and accomplishments in my CV.",
+  //   microCopy: "Check out my CV 📄",
+  //   Icon: DescriptionIcon,
+  //   link: CV,
+  // },
   {
     title: "GitHub",
     description: "Explore my code and projects on GitHub.",
