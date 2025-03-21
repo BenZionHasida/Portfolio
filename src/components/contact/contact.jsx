@@ -1,7 +1,6 @@
 import { IconButton } from "@mui/material";
 import styles from "./contact.module.scss";
 import contactMethods from "./contactMethodes";
-// import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 export default function Contact() {
